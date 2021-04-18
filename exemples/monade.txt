@@ -1,0 +1,20 @@
+Les Monades en Haskell:
+appliquer de l'imperatif(Faire des retour de fonction en testant des pb) en langage fonctionnel
+Je commence à saisir la pertinence des monades.
+
+En programmant le projet Prolog en OCaml, je chaîne le traitement de l'énoncé, un peu comme ça :
+énoncé |> analyse |> nettoyage |> affichage
+
+Mais parfois, il n'y a pas de solution donc j'avais encapsulé par une option (Some a | None). 
+Sauf que je ne pouvais plus chaîner énoncé |> … Donc j'ai dû réécrire les fonctions en encapsulant/décapsulant le Some. 
+C'est très lourd et je finis par écrire des romans en OCaml. Tandis qu'avec une monade qui permettrait de chaîner les options,
+ ce serait beaucoup plus concis.
+
+L'operateur BIND >>= (fish: >=>) f(a->mb)g(b->mc)
+un fish produit un g quelque soit a en appliquant f(a) >>=g
+(>>=)::mb ...cf cour10
+
+(return x)>>=f =fx
+mv>>=return =mv
+(mv>>=f)>>=g = mv>>=(\x->f x>>=g)
+

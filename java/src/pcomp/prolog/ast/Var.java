@@ -57,6 +57,9 @@ public class Var implements Term {
 	}
 
 	
+	
+	
+	
 	// visiteur
 	///////////////
 

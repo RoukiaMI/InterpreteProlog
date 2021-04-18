@@ -10,7 +10,7 @@ package pcomp.prolog.ast;
 /*
  * AST : interface de visiteur des termes.
  */
-public interface TermVisitor<T> {
+public interface TermVisitor<T>{
 	public T visit(Var var);
 	public T visit(Func func);
 }

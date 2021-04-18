@@ -20,3 +20,6 @@ Quant à l’algorithme Solve j’utilise Step pour tous les buts dans ma liste de go
 Solve.java : : a une méthode main et une méthode solve qui est l’implémentation de mon algorithme de Backtracking. Pour cet algorithme, j’utilise la méthode step2 de la classe unify2 du jalon2.
 Et j’enregistre le choix de cette solution dans une liste de choix que je vais par la suite renvoyer.
 PS : Solve.java fonctionne à elle seule et ne produit rien depuis Interpreter3 du main 
+
+#Jalon 4:
+J'ai implémenté le toplevel avec mon interpreteur du jalon 2

@@ -1,5 +1,7 @@
 # PCOMP - Projet 1 : Interprète Prolog
 
+Langage choisi : Java.
+
 Le premier projet est un interprète Prolog, à réaliser au choix en OCaml, Java ou Python.
 
 L'énoncé est disponible sur Moodle.

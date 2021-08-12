@@ -86,8 +86,6 @@ public class Unify{
 		Func t2=a2;//Le terme 1
 		String atom1=t1.getAtom();
 		String atom2=t2.getAtom();
-		//System.out.println("t1 : "+atom1+" & t2 :"+atom2);
-		TermV visitor=new TermV();
 		env=new HashMap<Term,Term>();
 		Map<String,Term> envP=new HashMap<String,Term>();
 		if(!(atom1.equals(atom2))){
@@ -101,9 +99,7 @@ public class Unify{
 				int nbArg=t1.getTerms().size();// si oui on commence l'unification
 				for(int i=0; i<nbArg;i++) {// associe tous les termes 
 					env.put(t1.getTerms().get(i), t2.getTerms().get(i));
-					
 				}
-			
 				for(Entry <Term,Term> e: env.entrySet()) {
 					if((e.getKey().getClass().getName()=="pcomp.prolog.ast.Var") && ((e.getValue().getClass().getName()=="pcomp.prolog.ast.Func")&& this.occurs((Func)e.getValue(), (Var)e.getKey()))){
 						throw new UnifyException(" l’unification Impossible: d’une variable et d’un terme contenant cette variable");
@@ -133,20 +129,11 @@ public class Unify{
 						t1=(Func)this.replace(envP, t1);
 						env.replace(t1, a);
 						envP.put(a.getVar(),t);
-						
 					}
-					
 				}
-				
-			
 		return envP;
 			}
 		}
-	
-	
-	
-	
-		
 	}
 
 
